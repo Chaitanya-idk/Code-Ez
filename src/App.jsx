@@ -10,7 +10,8 @@ function App() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    document.body.className = isDark ? "dark-theme" : "light-theme";
+    // apply dark theme class when enabled; remove class for light mode
+    document.body.className = isDark ? "dark-theme" : "";
   }, [isDark]);
 
   return (

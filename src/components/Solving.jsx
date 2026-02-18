@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router";
 import Editor from "@monaco-editor/react";
 import "./Solving.css";
-export function Solving() {
+export function Solving({ isDark }) {
   const { id } = useParams();
   console.log(id);
   
@@ -91,7 +91,7 @@ async function showValue() {
             <h4>Sample Output : {current.sample_output}</h4>
           </div>
         </div>
-        <div className="codeEditor">
+        <div className={`codeEditor ${isDark ? "solving-dark" : "solving-light"}`}>
           <Editor
             theme="vs-dark"
             className="textEditor"
