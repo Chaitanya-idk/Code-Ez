@@ -6,7 +6,7 @@ import { Footer } from "./Footer.jsx";
 export function ProblemSet() {
   const [problems, setProblems] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/api/problemset/all").then((response) => {
+    axios.get("https://back-end-gm6y.onrender.com/api/problemset/all").then((response) => {
       setProblems(response.data);
     });
   }, []);
