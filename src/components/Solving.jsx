@@ -67,7 +67,7 @@ async function showValue() {
 }
 
   return (
-    <>
+    <div className={`solving-page ${isDark ? "dark-theme" : ""}`}>
       <div className="solve-header">
         <h3>Problems</h3>
         <div className="Buttons">
@@ -91,9 +91,8 @@ async function showValue() {
             <h4>Sample Output : {current.sample_output}</h4>
           </div>
         </div>
-        <div className={`codeEditor ${isDark ? "solving-dark" : "solving-light"}`}>
+        <div className="codeEditor">
           <Editor
-            theme="vs-dark"
             className="textEditor"
             defaultLanguage="java"
             defaultValue="// Write your code in Java"
@@ -111,6 +110,6 @@ async function showValue() {
             <p className="validation">{output}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
